@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="38" height="18" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tileset_game" tilewidth="32" tileheight="32">
+  <image source="tileset_game.png" width="224" height="160"/>
+ </tileset>
+ <tileset firstgid="36" name="fondo_ser" tilewidth="32" tileheight="32">
+  <image source="fondo_set.png" width="64" height="576"/>
+ </tileset>
+ <layer name="fondo" width="38" height="18">
+  <properties>
+   <property name="fondo" value="true"/>
+   <property name="tileset" value="fondo_ser"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzN0NEKgCAMBVA/xkVEREhIRERE9P+f1MsGQ2gWZdvDgSvovMw757xBlVE1ApYtaBCwrAGSDi0CljVQLzp3CFi2oEfAsgWB7TAVFA1Cr0FRFHpFRSN2GH8CN/+72hWZPnZ3bq7XrCTXa3no7XuyZnqtD719TzYBny/dK2EX8F7SvRIOo07/zoeI
+  </data>
+ </layer>
+ <layer name="terreno" width="38" height="18">
+  <properties>
+   <property name="conColision" value="true"/>
+   <property name="tileset" value="tileset_game"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKA/YCMCD1aA7L7B5O5Rd5EGqO0udjRMjjvIdRc+ddQKb3x6yTGXWHfhU0OMXlq5ixhzyJHDp4ccd2FLD9jMI9e/gyU/owNquIsW/sHnLlLdTG580RIQU7cPtTofBAjFFTl+AKkXBGJhGrqLHPNISaP4yhNGJEwtOQCkxgQK
+  </data>
+ </layer>
+ <layer name="frente" width="38" height="18">
+  <properties>
+   <property name="frente" value="true"/>
+   <property name="tileset" value="tileset_game"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+kAVieRqYOwpGwSgYBaNgFIx0wIhEk4JHAflgsIYjBxIeTIAW7gIAvtIAfQ==
+  </data>
+ </layer>
+ <objectgroup color="#ffaa00" name="caja" width="0" height="0">
+  <object name="caja2" x="307" y="339" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="900"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0008a4" name="players" width="0" height="0">
+  <object name="start1" x="10" y="18" width="32" height="32">
+   <properties>
+    <property name="temperatura" value="24"/>
+    <property name="tipo" value="agua"/>
+   </properties>
+  </object>
+  <object name="start2" x="1101" y="494" width="32" height="32">
+   <properties>
+    <property name="temperatura" value="24"/>
+    <property name="tipo" value="aceite"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0497a4" name="chorro" width="0" height="0">
+  <object name="chorro1" x="566" y="347" width="61" height="163">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="true"/>
+    <property name="oculto" value="false"/>
+    <property name="posicion_inicial" value="abajo"/>
+    <property name="velocidad" value="80"/>
+   </properties>
+  </object>
+  <object name="chorro2" x="778" y="392" width="63" height="191">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+    <property name="posicion_inicial" value="arriba"/>
+    <property name="velocidad" value="1000"/>
+   </properties>
+  </object>
+  <object name="chorro3" x="1009" y="398" width="63" height="191">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+    <property name="posicion_inicial" value="abajo"/>
+    <property name="velocidad" value="80"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#d000d0" name="pinche" width="0" height="0">
+  <object name="pMovil11" x="911" y="530" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil10" x="96" y="560" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil9" x="991" y="210" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil8" x="480" y="177" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil5" x="160" y="50" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche3" x="1020" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche4" x="1052" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche5" x="1084" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche6" x="1116" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil6" x="1023" y="210" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil14" x="353" y="560" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil15" x="128" y="560" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil16" x="160" y="560" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche7" x="1151" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche8" x="1183" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche1" x="955" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche2" x="987" y="33" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="angulo" value="180"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche9" x="621" y="341" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="-350"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="270"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche10" x="619" y="301" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="-350"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="270"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche11" x="619" y="262" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="-350"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="270"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pinche12" x="620" y="222" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="-350"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="270"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil5" x="194" y="50" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil5" x="127" y="50" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil5" x="100" y="50" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="pMovil5" x="224" y="50" width="32" height="15">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#1d9da4" name="agua" width="0" height="0">
+  <object name="agua2" x="64" y="426" width="384" height="22"/>
+  <object name="agua4" x="768" y="553" width="95" height="23"/>
+  <object name="agua1" x="0" y="426" width="32" height="22"/>
+  <object name="agua3" x="544" y="489" width="95" height="23"/>
+  <object name="agua5" x="992" y="553" width="95" height="23"/>
+ </objectgroup>
+ <objectgroup color="#a40606" name="red" width="0" height="0">
+  <object name="red1" x="640" y="416" width="128" height="64">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="red1" x="1184" y="192" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#dbe600" name="palanca" width="0" height="0">
+  <object name="palanca1" x="912" y="352" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="cambiar_movilidad_de_objeto" value="5"/>
+    <property name="cantidad_de_objetos_a_lanzar" value="0"/>
+    <property name="esta_activa" value="true"/>
+    <property name="hacer_aparecer_objeto" value=""/>
+    <property name="lanzar_objeto" value=""/>
+    <property name="movil" value="false"/>
+    <property name="ocultar_objeto" value=""/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="palanca3" x="1104" y="124" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="cambiar_movilidad_de_objeto" value="22,23,12,13,14,15,20,21"/>
+    <property name="cantidad_de_objetos_a_lanzar" value="8"/>
+    <property name="esta_activa" value="false"/>
+    <property name="hacer_aparecer_objeto" value=""/>
+    <property name="lanzar_objeto" value="22,23,12,13,14,15,20,21"/>
+    <property name="movil" value="false"/>
+    <property name="ocultar_objeto" value=""/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="palanca3" x="184" y="286" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="cambiar_movilidad_de_objeto" value="6,24,25,26,27"/>
+    <property name="cantidad_de_objetos_a_lanzar" value="4"/>
+    <property name="esta_activa" value="false"/>
+    <property name="hacer_aparecer_objeto" value=""/>
+    <property name="lanzar_objeto" value="24,25,26,27"/>
+    <property name="movil" value="false"/>
+    <property name="ocultar_objeto" value="47"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00ff00" name="salida" width="0" height="0">
+  <object name="salida1" x="673" y="129" width="64" height="32">
+   <properties>
+    <property name="abierta" value="false"/>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+    <property name="salida_de" value="todos"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#8102ff" name="llave" width="0" height="0">
+  <object name="llaveSalida" x="685" y="439" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="400"/>
+    <property name="agarrable" value="todos"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+    <property name="para_mostrar_activar" value=""/>
+    <property name="para_mostrar_desactivar" value=""/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="nube" width="0" height="0">
+  <object name="nube1" x="0" y="384" width="32" height="32">
+   <properties>
+    <property name="frecuencia_de_decremento_ms" value="100"/>
+    <property name="frecuencia_de_goteo_max_ms" value="700"/>
+    <property name="frecuencia_de_goteo_min_ms" value="200"/>
+    <property name="frecuencia_de_salida_s" value="10"/>
+    <property name="frecuencia_minima_ms" value="100"/>
+    <property name="persigue" value="false"/>
+    <property name="rotada" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ffffff" name="teleport" width="0" height="0">
+  <object name="teleport1" x="19" y="482" width="27" height="27">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="destino" value="46"/>
+    <property name="entrable_por" value="todos"/>
+    <property name="habilitada_teletrasportacion" value="true"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+  <object name="teleport2" x="688" y="-9" width="29" height="27">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="angulo" value="0"/>
+    <property name="destino" value=""/>
+    <property name="entrable_por" value="todos"/>
+    <property name="habilitada_teletrasportacion" value="true"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#550000" name="bloque" width="0" height="0">
+  <object name="bloque1" x="32" y="320" width="32" height="32">
+   <properties>
+    <property name="ac_de_lanzamiento_en_x" value="0"/>
+    <property name="ac_de_lanzamiento_en_y" value="0"/>
+    <property name="alternante" value="false"/>
+    <property name="angulo" value="0"/>
+    <property name="movil" value="false"/>
+    <property name="oculto" value="false"/>
+    <property name="tiempo_alternacion" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
